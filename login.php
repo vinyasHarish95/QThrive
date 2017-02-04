@@ -1,5 +1,34 @@
+<?php
+if(!isset($_POST['signin'])) {
+	if(isset($_SESSION['Member_ID'])) {
+		session_start();
+		header("Location: chat.php");
+		die();
+	}
+}
+else {
+		include_once 'config/connection.php';
+			$query = "SELECT Member_ID,Email,Password FROM Member WHERE Email=? AND Password=?";
+			if($stmt = $con->prepare($query)) {
+				$stmt->bind_Param("ss", $_POST['Email'], $_POST['Password']);
+		$stmt->execute();
+		$result = $stmt->get_result();
+		$num = $result->num_rows;
+		if($num>0){
+			$myrow = $result->fetch_assoc();
+			$_SESSION['Member_ID'] = $myrow['Member_ID'];
+			header("Location:chat.php");
+			exit();
+		} else {
+			error_log("Failed to login");
+			header("location:login.php?msg=failed");
+		}
+	} else {
+		echo "Failed to prepare the SQL";
+	}
+}
+?>
 <!DOCTYPE html>
-
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
@@ -13,44 +42,6 @@
 		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
-	  	<?php
-		 session_start();
-		?>
-		<?php
-		if(isset($_GET['logout'])) {
-			$_SESSION['Member_ID'] = null;
-			session_destroy();
-		}
-		?>
-		<?php
-		if(isset($_SESSION['Member_ID'])) {
-			header("Location: chat.php");
-			die();
-		}
-		?>
-		<?php
-		if(isset($_POST['signin'])) {
-		    include_once 'config/connection.php';
-	        $query = "SELECT Member_ID,Email,Password FROM Member WHERE Email=? AND Password=?";
-	        if($stmt = $con->prepare($query)) {
-		        $stmt->bind_Param("ss", $_POST['Email'], $_POST['Password']);
-				$stmt->execute();
-				$result = $stmt->get_result();
-				$num = $result->num_rows;
-				if($num>0){
-					$myrow = $result->fetch_assoc();
-					$_SESSION['Member_ID'] = $myrow['Member_ID'];
-					header("Location:chat.php");
-					die();
-				} else {
-					echo "Failed to login";
-					header("location:login.php?msg=failed");
-				}
-			} else {
-				echo "failed to prepare the SQL";
-			}
-		}
-		?>
 	    <div class="navbar navbar-default navbar-fixed-top">
 	     	<div class="container">
 	        	<div class="navbar-header">

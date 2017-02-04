@@ -65,7 +65,7 @@
 
          		<ul class="nav navbar-nav navbar-right">
 
-            		<li><a>Welcome, Vinyas.</a></li>
+            		<li><a><h4 style="color: white;">Welcome, Vinyas.</h4></a></li>
 
          		</ul>
 
@@ -83,7 +83,7 @@
 			<div class="row">
 
 				<div class="col-lg-6">
-          <img class="img-responsive" style=" height: auto; width: auto; max-height: 400px; max-width: 400px;" src="img/sona.png" alt="Sona">
+          <img class="img-responsive" style=" height: auto; width: auto; max-height: 600px; max-width: 600px;" src="img/sona.png" alt="Sona">
 					<h1>Meet Sona...</h1>
 					<h2>Sona is a friendly chatbot that will help facilitate reflection.</h2>
 
