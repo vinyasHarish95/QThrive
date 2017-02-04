@@ -23,6 +23,7 @@
 		}
 		?>
 		<?php
+		echo 'hello';
 		if(isset($_POST['sign_up'])) {
 		    include_once 'config/connection.php';
 	        $query = "SELECT Email FROM Member WHERE Email=?";
@@ -70,7 +71,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6 col-lg-offset-3">
-						<h1 style="text-align: center">We're happy to have you with us.</h1>
+						<h1 style="text-align: center">Welcome aboard.</h1>
 					</div>
 					<div class="col-lg-6 col-lg-offset-3">
 						<form name='signup' id='signup' action='signup.php' method='POST'>
@@ -87,7 +88,7 @@
 						 	<div class="form-group">
 						    	<input style="width: 100%;" type="email" class="form-control" name="Email" id="Email" placeholder="Email Address">
 						    	<script>
-								    var captured = /email=([^&]+)/.exec(window.location.href)[1];
+								    var captured = /email=([^&]+)/.exec(window.location.href);
 								    var result = captured ? captured : '';
 								    result = result.replace('%40','@');
 								    document.getElementById("Email").value = String(result);
@@ -196,7 +197,11 @@
 							    	<div style='padding-right: 15px; padding-left: 15px;' class="col-md-3">
 							    		<select style="width: 100%;" type="text" class="form-control" name="Year" id="Year">
 							    			<option value="" selected disabled>Year</option>
-                        <option>2017</option>
+												<option>2021</option>
+												<option>2020</option>
+												<option>2019</option>
+												<option>2018</option>
+												<option>2017</option>
                         <option>2016</option>
                         <option>2015</option>
 										    <option>2014</option>
