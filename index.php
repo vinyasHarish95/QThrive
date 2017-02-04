@@ -134,7 +134,7 @@
 
 			<div class="col-lg-4">
 
-				<img src="img/ser01.png" height="180" alt="">
+				<img src="img/index01.png" height="180" alt="">
 
 				<h4>Chat.</h4>
 
@@ -145,7 +145,7 @@
 
 			<div class="col-lg-4">
 
-				<img src="img/ser02.png" height="180" alt="">
+				<img src="img/index02.png" height="180" alt="">
 
 				<h4>Journal.</h4>
 
@@ -156,7 +156,7 @@
 
 			<div class="col-lg-4">
 
-				<img src="img/ser03.png" height="180" alt="">
+				<img src="img/index03.png" height="180" alt="">
 
 				<h4>Thrive.</h4>
 
