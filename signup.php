@@ -3,7 +3,7 @@
 if (!isset($_POST['sign_up'])){
 	if(isset($_SESSION['Member_ID'])) {
 		session_start();
-		header("Location: userdash.php");
+		header("Location: chat.php");
 		die();
 	}
 }
@@ -22,7 +22,7 @@ else {
 					$query = "SELECT Member_ID FROM Member WHERE Email = '$_POST[Email]'";
 					$myrow = mysqli_query($con,$query)->fetch_assoc();
 			$_SESSION['Member_ID'] = $myrow['Member_ID'];
-			header("Location:userdash.php");
+			header("Location:chat.php");
 			exit();
 		} else {
 			error_log("Email already in use");

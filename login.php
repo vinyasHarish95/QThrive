@@ -24,7 +24,7 @@
 		?>
 		<?php
 		if(isset($_SESSION['Member_ID'])) {
-			header("Location: userdash.php");
+			header("Location: chat.php");
 			die();
 		}
 		?>
@@ -40,7 +40,7 @@
 				if($num>0){
 					$myrow = $result->fetch_assoc();
 					$_SESSION['Member_ID'] = $myrow['Member_ID'];
-					header("Location:userdash.php");
+					header("Location:chat.php");
 					die();
 				} else {
 					echo "Failed to login";
