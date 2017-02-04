@@ -18,6 +18,7 @@ CREATE TABLE Member(
 CREATE TABLE Entry(
 	Entry_ID int NOT NULL AUTO_INCREMENT,
 	Writer_ID int NOT NULL,
+  Creation_Date datetime NOT NULL,
 	Anger double DEFAULT NULL,
 	Joy double DEFAULT NULL,
 	Fear double DEFAULT NULL,
