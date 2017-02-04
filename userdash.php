@@ -65,7 +65,7 @@
 
          		<ul class="nav navbar-nav navbar-right">
 
-            		<li><a href="login.php">Already a member?</a></li>
+            		<li><a>Welcome, Vinyas.</a></li>
 
          		</ul>
 
@@ -83,28 +83,15 @@
 			<div class="row">
 
 				<div class="col-lg-6">
+          <img class="img-responsive" style=" height: auto; width: auto; max-height: 400px; max-width: 400px;" src="img/sona.png" alt="Sona">
+					<h1>Meet Sona...</h1>
+					<h2>Sona is a friendly chatbot that will help facilitate reflection.</h2>
 
-					<h1>Work towards better mental health...<br>one journal entry at a time.</h1>
-
-					<form action="signup.php" method="GET" class="form-inline" role="form">
-
-						<div class="form-group">
-
-					 		<input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="youremail@address.ca">
-
-						</div>
-
-						<button type="submit" class="btn btn-warning btn-lg" value="Submit">Sign Me Up!</button>
-
-					</form>
 
 				</div>
 				<!-- /col-lg-6 -->
 
 				<div class="col-lg-6">
-
-					<img class="img-responsive" style=" height: auto; width: auto; max-height: 400px; max-width: 400px;" src="img/diary.png" alt="Diary!">
-
 				</div>
 				<!-- /col-lg-6 -->
 
@@ -123,55 +110,22 @@
 
 			<div class="col-lg-6 col-lg-offset-3">
 
-				<h1>IT WORKED</h1>
+				<h1>So what do I do?</h1>
+				<h4>Speak to Sona like you would a normal person. Based on what you tell her, she may prompt you to do some journalling or connect you to local resources.</h4>
+				<p></p>
+				<h4>Fun fact... 'Sona' is Scottish Gaelic for 'happy'.</h4>
 
 			</div>
 
 		</div>
-		<!-- /row -->
 
-		<div class="row mt centered">
-
-			<div class="col-lg-4">
-
-				<img src="img/ser01.png" height="180" alt="">
-
-				<h4>Chat.</h4>
-
-				<p>Need someone to talk to?<br>Meet Sona.<br>Sona is a chatbot that helps facilitate journalling.</p>
-
-			</div>
-			<!--/col-lg-4 -->
-
-			<div class="col-lg-4">
-
-				<img src="img/ser02.png" height="180" alt="">
-
-				<h4>Journal.</h4>
-
-				<p>Stressed? Upset? Need to vent?<br>Take a minute to record your thoughts.<br>We're here for you, always.</p>
-
-			</div>
-			<!--/col-lg-4 -->
-
-			<div class="col-lg-4">
-
-				<img src="img/ser03.png" height="180" alt="">
-
-				<h4>Thrive.</h4>
-
-				<p>Access local resources.<br>Look at personal growth.<br>Be well.</p>
-
-			</div>
 			<!--/col-lg-4 -->
 
 			<div class="row mt centered">
 
 				<div class="col-lg-6 col-lg-offset-3">
 
-					<h1>QThrive is for students.</h1>
 
-					<h3>Take the challenges and joys one day at a time.</h3>
 
 				</div>
 
@@ -190,24 +144,10 @@
 
 		<div class="row centered">
 
-			<div class="col-lg-6 col-lg-offset-3">
-
-				<form action="signup.php" method="GET" class="form-inline" role="form">
-
-					<div class="form-group">
-
-				 		<input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="youremail@address.ca">
-
-					</div>
-
-					<button type="submit" class="btn btn-warning btn-lg" value="Submit">Sign Me Up!</button>
-
-				</form>
-
-			</div>
-
 		</div>
 		<!-- /row -->
+		<h1 class="centered">QThrive is for students.</h1>
+		<h3 class="centered">Take the challenges and joys one day at a time.</h3>
 
 		<hr>
 
