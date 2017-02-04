@@ -57,7 +57,7 @@
 
 		        </button>
 
-	         	<a class="navbar-brand" href="index.php"><b>QThrive</b></a>
+	         	<a class="navbar-brand" href="index.php"> <img src="img/QThrive.png" height="50"> <b>QThrive</b> </a>
 
 	        </div>
 
