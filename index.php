@@ -11,7 +11,7 @@
 
     <link rel="shortcut icon" href="img/favicon.png">
 
-    <title>QThrive - Better mental health through journalling </title>
+    <title>QThrive - Better mental health through journaling </title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -57,7 +57,7 @@
 
 		        </button>
 
-	         	<a class="navbar-brand" href="index.php"><b>QThrive</b></a>
+	         	<a class="navbar-brand" href="index.php"> <img src="img/QThrive.png" height="50"> <b>QThrive</b> </a>
 
 	        </div>
 
@@ -84,7 +84,7 @@
 
 				<div class="col-lg-6">
 
-					<h1>Work towards better mental health...<br>one journal entry at a time.</h1>
+					<h1>Work towards better mental health... one journal entry at a time.</h1>
 
 					<form action="signup.php" method="GET" class="form-inline" role="form">
 
@@ -123,7 +123,7 @@
 
 			<div class="col-lg-6 col-lg-offset-3">
 
-				<h1>Pain is real,<br/>but so is hope.</h1>
+				<h1>Pain is real, but so is hope.</h1>
 
 			</div>
 
@@ -138,7 +138,7 @@
 
 				<h4>Chat.</h4>
 
-				<p>Need someone to talk to?<br>Meet Sona.<br>Sona is a chatbot that helps facilitate journalling.</p>
+				<p>Need someone to talk to?<br>Meet Sona.<br>Sona is a chatbot that helps facilitate journaling.</p>
 
 			</div>
 			<!--/col-lg-4 -->
