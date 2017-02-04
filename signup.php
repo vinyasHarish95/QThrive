@@ -1,5 +1,39 @@
-<!DOCTYPE html>
+<?php
 
+if (!isset($_POST['sign_up'])){
+	if(isset($_SESSION['Member_ID'])) {
+		session_start();
+		header("Location: userdash.php");
+		die();
+	}
+}
+else {
+		include_once 'config/connection.php';
+			$query = "SELECT Email FROM Member WHERE Email=?";
+			if($stmt = $con->prepare($query)) {
+				$stmt->bind_Param("s", $_POST['Email']);
+		$stmt->execute();
+		$result = $stmt->get_result();
+		$num = $result->num_rows;
+		if($num===0) {
+					$query = "INSERT INTO Member (F_Name,L_Name,Email,Phone_No,Grad_Year,Faculty,Degree_Type,Password)
+					VALUES ('$_POST[FirstName]','$_POST[LastName]','$_POST[Email]','$_POST[Phone]','$_POST[Year]','$_POST[Faculty]','$_POST[Degree]','$_POST[Password]')";
+					mysqli_query($con,$query);
+					$query = "SELECT Member_ID FROM Member WHERE Email = '$_POST[Email]'";
+					$myrow = mysqli_query($con,$query)->fetch_assoc();
+			$_SESSION['Member_ID'] = $myrow['Member_ID'];
+			header("Location:userdash.php");
+			exit();
+		} else {
+			error_log("Email already in use");
+			header("Location:signup.php?msg=bademail");
+		}
+	} else {
+		echo "failed to prepare the SQL";
+	}
+}
+?>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
@@ -13,43 +47,6 @@
 		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
-		<?php
-		 session_start();
-		?>
-		<?php
-		if(isset($_SESSION['Member_ID'])) {
-			header("Location: userdash.php");
-			die();
-		}
-		?>
-		<?php
-		echo 'hello';
-		if(isset($_POST['sign_up'])) {
-		    include_once 'config/connection.php';
-	        $query = "SELECT Email FROM Member WHERE Email=?";
-	        if($stmt = $con->prepare($query)) {
-		        $stmt->bind_Param("s", $_POST['Email']);
-				$stmt->execute();
-				$result = $stmt->get_result();
-				$num = $result->num_rows;
-				if($num===0) {
-		        	$query = "INSERT INTO Member (F_Name,L_Name,Email,Phone_No,Grad_Year,Faculty,Degree_Type,Password)
-		        	VALUES ('$_POST[FirstName]','$_POST[LastName]','$_POST[Email]','$_POST[Phone]','$_POST[Year]','$_POST[Faculty]','$_POST[Degree]','$_POST[Password]')";
-	        		mysqli_query($con,$query);
-	        		$query = "SELECT Member_ID FROM Member WHERE Email = '$_POST[Email]'";
-	        		$myrow = mysqli_query($con,$query)->fetch_assoc();
-					$_SESSION['Member_ID'] = $myrow['Member_ID'];
-					header("Location: userdash.php");
-					die();
-				} else {
-					echo "Email already in use";
-					header("location:signup.php?msg=bademail");
-				}
-			} else {
-				echo "failed to prepare the SQL";
-			}
-		}
-		?>
 	    <div class="navbar navbar-default navbar-fixed-top">
 	     	<div class="container">
 	        	<div class="navbar-header">
@@ -88,10 +85,11 @@
 						 	<div class="form-group">
 						    	<input style="width: 100%;" type="email" class="form-control" name="Email" id="Email" placeholder="Email Address">
 						    	<script>
-								    var captured = /email=([^&]+)/.exec(window.location.href);
+										var captured = /email=([^&]+)/.exec(window.location.href)[1];
 								    var result = captured ? captured : '';
 								    result = result.replace('%40','@');
 								    document.getElementById("Email").value = String(result);
+
 								</script>
 						  	</div>
 							<div class="form-group">
