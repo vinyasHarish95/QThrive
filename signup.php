@@ -5,9 +5,9 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
-	    <meta name="author" content="ZB&amp;VH">
+	    <meta name="author" content="VMS&amp;SN&amp;BB&amp;VH">
 		<link rel="shortcut icon" href="img/favicon.png">
-		<title>QBnB - Sign Up</title>
+		<title>QThrive - Sign Up</title>
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/main.css" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
@@ -22,17 +22,17 @@
 			die();
 		}
 		?>
-		<?php 
-		if(isset($_POST['sign_up'])) {	 
-		    include_once 'config/connection.php'; 
+		<?php
+		if(isset($_POST['sign_up'])) {
+		    include_once 'config/connection.php';
 	        $query = "SELECT Email FROM Member WHERE Email=?";
 	        if($stmt = $con->prepare($query)) {
-		        $stmt->bind_Param("s", $_POST['Email']); 	         
+		        $stmt->bind_Param("s", $_POST['Email']);
 				$stmt->execute();
 				$result = $stmt->get_result();
 				$num = $result->num_rows;
 				if($num===0) {
-		        	$query = "INSERT INTO Member (F_Name,L_Name,Email,Phone_No,Grad_Year,Faculty,Degree_Type,Password) 
+		        	$query = "INSERT INTO Member (F_Name,L_Name,Email,Phone_No,Grad_Year,Faculty,Degree_Type,Password)
 		        	VALUES ('$_POST[FirstName]','$_POST[LastName]','$_POST[Email]','$_POST[Phone]','$_POST[Year]','$_POST[Faculty]','$_POST[Degree]','$_POST[Password]')";
 	        		mysqli_query($con,$query);
 	        		$query = "SELECT Member_ID FROM Member WHERE Email = '$_POST[Email]'";
@@ -57,7 +57,7 @@
 		            <span class="icon-bar"></span>
 		            <span class="icon-bar"></span>
 			        </button>
-		         	<a class="navbar-brand" href="index.php"><b>QBnB</b></a>
+		         	<a class="navbar-brand" href="index.php"><b>QThrive</b></a>
 		        </div>
 	        	<div class="navbar-collapse collapse">
 	         		<ul class="nav navbar-nav navbar-right">
@@ -70,7 +70,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6 col-lg-offset-3">
-						<h1 style="text-align: center">Welcome aboard.</h1>
+						<h1 style="text-align: center">We're happy to have you with us.</h1>
 					</div>
 					<div class="col-lg-6 col-lg-offset-3">
 						<form name='signup' id='signup' action='signup.php' method='POST'>
@@ -99,22 +99,22 @@
 							<div class="row" style="padding-bottom: 15px;">
 								<div class="form-group">
 									<div style='padding-right: 15px; padding-left: 15px;' class="col-md-3">
-							    		<select style="width: 100%;" type="text" class="form-control" name="Degree" id="Degree">		    	
+							    		<select style="width: 100%;" type="text" class="form-control" name="Degree" id="Degree">
 										    <option value="" selected disabled>Degree</option>
 										    <option>BA</option>
 										    <option>BSc</option>
 										    <option>BComm</option>
 										    <option>BComp</option>
 										    <option>BEd</option>
-											<option>BEng</option>
-											<option>MA</option>
-											<option>MEd</option>										
-											<option>MSc</option>
-											<option>MBA</option>
-											<option>JD</option>
-											<option>MD</option>
-											<option>PhD</option>
-										</select>
+											  <option>BEng</option>
+											  <option>MA</option>
+											  <option>MEd</option>
+											  <option>MSc</option>
+											  <option>MBA</option>
+											  <option>JD</option>
+											  <option>MD</option>
+											  <option>PhD</option>
+										  </select>
 							    	</div>
 							    	<div style='padding-right: 15px; padding-left: 15px;' class="col-md-6">
 							    		<select style="width: 100%;" type="text" class="form-control" name="Faculty" id="Faculty">
@@ -196,66 +196,14 @@
 							    	<div style='padding-right: 15px; padding-left: 15px;' class="col-md-3">
 							    		<select style="width: 100%;" type="text" class="form-control" name="Year" id="Year">
 							    			<option value="" selected disabled>Year</option>
-										    <option>2015</option>
+                        <option>2017</option>
+                        <option>2016</option>
+                        <option>2015</option>
 										    <option>2014</option>
 										    <option>2013</option>
 										    <option>2012</option>
 										    <option>2011</option>
-											<option>2010</option>
-											<option>2009</option>
-											<option>2008</option>
-											<option>2007</option>
-											<option>2006</option>
-											<option>2005</option>
-											<option>2004</option>
-											<option>2003</option>
-											<option>2002</option>
-											<option>2001</option>
-											<option>2000</option>
-											<option>1999</option>
-											<option>1998</option>
-											<option>1997</option>
-											<option>1996</option>
-											<option>1995</option>
-											<option>1994</option>
-											<option>1993</option>
-											<option>1992</option>
-											<option>1991</option>
-											<option>1990</option>
-											<option>1989</option>
-											<option>1988</option>
-											<option>1987</option>
-											<option>1986</option>
-											<option>1985</option>
-											<option>1984</option>
-											<option>1983</option>
-											<option>1982</option>
-											<option>1981</option>
-											<option>1980</option>
-											<option>1979</option>
-											<option>1978</option>
-											<option>1977</option>
-											<option>1976</option>
-											<option>1975</option>
-											<option>1974</option>
-											<option>1973</option>
-											<option>1972</option>
-											<option>1971</option>
-											<option>1970</option>
-											<option>1969</option>
-											<option>1968</option>
-											<option>1967</option>
-											<option>1966</option>
-											<option>1965</option>
-											<option>1964</option>
-											<option>1963</option>
-											<option>1962</option>
-											<option>1961</option>
-											<option>1960</option>
-											<option>1959</option>
-											<option>1958</option>
-											<option>1957</option>
-											<option>1956</option>
+											  <option>2010</option>
 							    		</select>
 							    	</div>
 								</div>
@@ -278,7 +226,7 @@
 		</div>
 		<div class="container">
 			<hr>
-			<p class="centered">Created by BH &amp; Associates</p>
+			<p class="centered">Created by Ben, Sean, Vinyas &amp; Vinith</p>
 		</div>
 		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 	    <script src="js/bootstrap.min.js"></script>

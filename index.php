@@ -7,11 +7,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="author" content="ZB&amp;VH">
+    <meta name="author" content="VMS&amp;SN&amp;BB&amp;VH">
 
     <link rel="shortcut icon" href="img/favicon.png">
 
-    <title>QBnB - Queen's Alum Bed &amp; Breakfast</title>
+    <title>QThrive - Better mental health through journalling </title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -57,7 +57,7 @@
 
 		        </button>
 
-	         	<a class="navbar-brand" href="index.php"><b>QBnB</b></a>
+	         	<a class="navbar-brand" href="index.php"><b>QThrive</b></a>
 
 	        </div>
 
@@ -84,7 +84,7 @@
 
 				<div class="col-lg-6">
 
-					<h1>Find Houses.<br>Rent from Alumni.</h1>
+					<h1>Work towards better mental health...<br>one journal entry at a time.</h1>
 
 					<form action="signup.php" method="GET" class="form-inline" role="form">
 
@@ -103,7 +103,7 @@
 
 				<div class="col-lg-6">
 
-					<img class="img-responsive" style="border-radius: 50%; height: auto; width: auto; max-height: 400px; max-width: 400px;" src="img/cabin.png" alt="Houses!">
+					<img class="img-responsive" style=" height: auto; width: auto; max-height: 400px; max-width: 400px;" src="img/diary.png" alt="Diary!">
 
 				</div>
 				<!-- /col-lg-6 -->
@@ -123,7 +123,7 @@
 
 			<div class="col-lg-6 col-lg-offset-3">
 
-				<h1>Your Next Trip<br/>Bleeds Tricolour.</h1>
+				<h1>Pain is real,<br/>but so is hope.</h1>
 
 			</div>
 
@@ -136,9 +136,9 @@
 
 				<img src="img/ser01.png" height="180" alt="">
 
-				<h4>Trusted User Base.</h4>
+				<h4>Chat.</h4>
 
-				<p>You're Queen's Alum.<br>They're Queen's Alum.<br>1 + 1 = 2. It's simple.</p>
+				<p>Need someone to talk to?<br>Meet Sona.<br>Sona is a chatbot that helps facilitate journalling.</p>
 
 			</div>
 			<!--/col-lg-4 -->
@@ -147,9 +147,9 @@
 
 				<img src="img/ser02.png" height="180" alt="">
 
-				<h4>International Housing.</h4>
+				<h4>Journal.</h4>
 
-				<p>You travel internationally.<br>Queen's alumni are international.<br>We'll find you a roof, wherever.</p>
+				<p>Stressed? Upset? Need to vent?<br>Take a minute to record your thoughts.<br>We're here for you, always.</p>
 
 			</div>
 			<!--/col-lg-4 -->
@@ -158,9 +158,9 @@
 
 				<img src="img/ser03.png" height="180" alt="">
 
-				<h4>Simple Booking.</h4>
+				<h4>Thrive.</h4>
 
-				<p>Found a house?<br>Pick your dates.<br>Click "Go".</p>
+				<p>Access local resources.<br>Look at personal growth.<br>Be well.</p>
 
 			</div>
 			<!--/col-lg-4 -->
@@ -169,9 +169,9 @@
 
 				<div class="col-lg-6 col-lg-offset-3">
 
-					<h1>QBnB is for Alumni.</h1>
+					<h1>QThrive is for students.</h1>
 
-					<h3>For those who travel.<br>For those who share.</h3>
+					<h3>Take the challenges and joys one day at a time.</h3>
 
 				</div>
 
@@ -216,7 +216,7 @@
 
 	<div class="container">
 
-		<p class="centered">Created by BH &amp; Associates</p>
+		<p class="centered">Created by Ben, Sean, Vinyas &amp; Vinith</p>
 
 	</div>
 	<!-- /container -->

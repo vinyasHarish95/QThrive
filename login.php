@@ -7,7 +7,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 		<link rel="shortcut icon" href="img/favicon.png">
-		<title>QBnB - Log In</title>
+		<title>QThrive - Log In</title>
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/main.css" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
@@ -21,22 +21,22 @@
 			$_SESSION['Member_ID'] = null;
 			session_destroy();
 		}
-		?>	 
+		?>
 		<?php
 		if(isset($_SESSION['Member_ID'])) {
 			header("Location: userdash.php");
 			die();
 		}
 		?>
-		<?php 
+		<?php
 		if(isset($_POST['signin'])) {
-		    include_once 'config/connection.php'; 
+		    include_once 'config/connection.php';
 	        $query = "SELECT Member_ID,Email,Password FROM Member WHERE Email=? AND Password=?";
 	        if($stmt = $con->prepare($query)) {
 		        $stmt->bind_Param("ss", $_POST['Email'], $_POST['Password']);
 				$stmt->execute();
 				$result = $stmt->get_result();
-				$num = $result->num_rows;	
+				$num = $result->num_rows;
 				if($num>0){
 					$myrow = $result->fetch_assoc();
 					$_SESSION['Member_ID'] = $myrow['Member_ID'];
@@ -59,7 +59,7 @@
 		            <span class="icon-bar"></span>
 		            <span class="icon-bar"></span>
 		         	</button>
-	         		<a class="navbar-brand" href="index.php"><b>QBnB</b></a>
+	         		<a class="navbar-brand" href="index.php"><b>QThrive</b></a>
 	       		</div>
 				<div class="navbar-collapse collapse">
 	         		<ul class="nav navbar-nav navbar-right">
@@ -82,20 +82,20 @@
 						 	</div>
 						 	<div style="text-align: center">
 								<button type="submit" class="btn btn-default" name="signin">Sign In</button>
-							</div>	
+							</div>
 						</form>
 						<?php
 						if (isset($_GET["msg"]) && $_GET["msg"] == 'failed') {
 						echo "<br><div align='center'><span class='label label-danger'>Wrong Email or Password :(</span></div>";
 						}
 						?>
-					</div>				
+					</div>
 				</div>
 			</div>
-		</div>	
+		</div>
 		<div class="container">
 			<hr>
-			<p class="centered">Created by BH &amp; Associates</p>
+			<p class="centered">Created by Ben, Sean, Vinyas &amp; Vinith</p>
 		</div>
 		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 	    <script src="js/bootstrap.min.js"></script>
