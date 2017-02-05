@@ -151,27 +151,16 @@ if (isset($_POST['submit'])) {
   </div>
 </div>
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Sentiment analysis...</p>
-  </div>
-
-</div>
-
 <script>
 		//Indico API call
 		$('#sentiment').click(function(event){
 				event.preventDefault();
 				var form= $('form').serializeArray();
-				var text = $('#journalForm').find("input[name='journalEntry']").val();
+				var text = $('#journalForm').find("textarea[name='journalEntry']").val();
 				$.post(
 						'https://apiv2.indico.io/emotion',
 						JSON.stringify({
-						'api_key': "4a08c5fe6af3a28e60008e586a51d45d",
+						'api_key': "acf9fb74754d35516890238867cc2c73",
 						'data': text
 						})
 				).then(function(res) {
@@ -186,32 +175,6 @@ if (isset($_POST['submit'])) {
 						document.cookie = 'surprise='+emotionValues.results.surprise+'; expires=' + now.toUTCString() + '; path=/';
 				});
 		})
-		// Get the modal
-		var modal = document.getElementById('myModal');
-
-		// Get the button that opens the modal
-		var btn = document.getElementById("sentiment");
-
-		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("close")[0];
-
-		// When the user clicks on the button, open the modal
-		btn.onclick = function() {
-			modal.style.display = "block";
-		}
-
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function() {
-		modal.style.display = "none";
-		}
-
-		//When the user clicks anywhere outside of the modal, close it
-		window.onclick = function(event) {
-			if (event.target == modal) {
-				modal.style.display = "none";
-			}
-}
-
 </script>
 </body>
 </html>
