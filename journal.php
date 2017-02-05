@@ -34,9 +34,12 @@ if (isset($_POST['submit'])) {
   <!-- Custom styles for this template -->
   <link href="css/main.css" rel="stylesheet">
 
+	<link href="css/circle.css" rel="stylesheet">
+
   <!-- Fonts from Google Fonts -->
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<style>
 		body {
@@ -143,10 +146,80 @@ if (isset($_POST['submit'])) {
             <h1 for="journal" style="text-align:center">Journal Entry</h1>
             <textarea name="journalEntry" id="journal"></textarea>
         </div>
-				<div class="btn-group" style="margin-left:20%"> <button id="sentiment" type="analyze" class="btn" name="analyze" style="background: #3498db; border: 2px solid white;
+				<div class="btn-group" style="margin-left:20%"> <button id="sentiment" data-toggle="modal" data-target="#myModal" type="analyze" class="btn" name="analyze" style="background: #3498db; border: 2px solid white;
 				color: white; width: 300px; height: 100 px;  font-size:20px; margin-right:100px">Analyze</button>
         <button type="submit" class="btn" name="submit" style="background: #3498db; border: 2px solid white;
 				color: white; width: 300px; height: 44px;  font-size:20px">Submit</button></div>
+				<div class="container">
+
+				 <!-- Modal -->
+				 <div class="modal fade" id="myModal" role="dialog">
+				   <div class="modal-dialog">
+
+				     <!-- Modal content-->
+				     <div class="modal-content">
+				       <div class="modal-header">
+				         <button type="button" class="close" data-dismiss="modal">&times;</button>
+				         <h4 class="modal-title">Sentiments Analysis (Joy, Fear, Anger, Surpise, Sadness)</h4>
+				       </div>
+				       <div class="modal-body" style="margin-left:30px">
+								 <div class="row" style="margin-left:30px">
+								 <div class="clearfix">
+		                 <div class="c100 p80" style="margin-right:20px">
+		                     <span>80%</span>
+		                     <div class="slice">
+		                         <div class="bar"></div>
+		                         <div class="fill"></div>
+		                     </div>
+		                 </div>
+
+										 <div class="c100 p16 green" style="margin-right:20px">
+		                     <span>16%</span>
+		                     <div class="slice">
+		                         <div class="bar"></div>
+		                         <div class="fill"></div>
+		                     </div>
+		                 </div>
+
+										 <div class="c100 p1 orange" style="margin-right:20px">
+		                     <span>0.49%</span>
+		                     <div class="slice">
+		                         <div class="bar"></div>
+		                         <div class="fill"></div>
+		                     </div>
+		                 </div>
+									 </div>
+								 </div>
+									 <div class="row" style="margin-left:60px">
+										 <div class="c100 p2" style="margin-left:40px; margin-right:20px">
+		                     <span>1.65%</span>
+		                     <div class="slice">
+		                         <div class="bar"></div>
+		                         <div class="fill"></div>
+		                     </div>
+												 </div>
+												 <div class="c100 p1 green" style="margin-right:20px">
+				                     <span>1.15%</span>
+				                     <div class="slice">
+				                         <div class="bar"></div>
+				                         <div class="fill"></div>
+				                     </div>
+				                 </div>
+											</div>
+
+
+
+		             </div>
+				       </div>
+				       <div class="modal-footer">
+				         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				       </div>
+				     </div>
+
+				   </div>
+				 </div>
+
+				</div>
     </form>
   </div>
 </div>
