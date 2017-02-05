@@ -172,19 +172,6 @@
 			</div>
 			<!--/col-lg-4 -->
 
-			<div class="row mt centered">
-
-				<div class="col-lg-6 col-lg-offset-3">
-
-					<h1>QThrive is for students.</h1>
-
-					<h3>Take the challenges and joys one day at a time.</h3>
-
-				</div>
-
-			</div>
-			<!-- /row -->
-
 		</div>
 		<!-- /row -->
 
@@ -197,9 +184,21 @@
 
 		<div class="row centered">
 
+            <div class="row centered">
+
+                <div class="col-lg-6 col-lg-offset-3">
+
+                    <h1>QThrive is for students.</h1>
+
+                    <h3>Take the challenges and joys of life one day at a time.</h3>
+
+                </div>
+
+            </div>
+
 			<div class="col-lg-6 col-lg-offset-3">
 
-				<form action="signup.php" method="GET" class="form-inline" role="form">
+				<form action="signup.php" method="GET" class="form-inline" style="margin-top:1em" role="form">
 
 					<div class="form-group">
 
