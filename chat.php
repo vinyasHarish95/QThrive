@@ -115,14 +115,13 @@
 
 	<div class="container">
 
-		<div class="row mt centered">
+		<div class="row mt centered" style="margin-bottom:10px;">
 
 			<div class="col-lg-6 col-lg-offset-3">
 
 				<h1>So what do I do?</h1>
 				<h4>Speak to Sona like you would a normal person. Based on what you tell her, she may prompt you to do some journalling or connect you to local resources.</h4>
-				<br></br>
-				<br></br>
+				<br>
 				<h4>Fun fact... 'Sona' is Scottish Gaelic for 'happy'.</h4>
 				<p></p>
 
@@ -130,23 +129,7 @@
 
 		</div>
 
-			<!--/col-lg-4 -->
-
-			<div class="row mt centered">
-
-				<div class="col-lg-6 col-lg-offset-3">
-
-
-
-				</div>
-
-			</div>
-			<!-- /row -->
-
-		</div>
-		<!-- /row -->
-
-	</div>
+    </div>
 	<!-- /container -->
 
 	<div class="container">
