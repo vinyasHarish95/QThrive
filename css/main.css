@@ -13,7 +13,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
-    color: #ffffff;
+    color: #333;
 }
 
 h1 {
@@ -24,12 +24,12 @@ h2 {
 }
 
 h3 {
-	color: #ffffff;
+	color: #95a5a6;
 	font-weight: 400;
 }
 
 h4 {
-	color: #ffffff;
+	color: #95a5a6;
 	font-weight: 400;
 	font-size: 20px;
 }
@@ -81,7 +81,7 @@ a.intable:hover {
     color: #3498db;
 }
 
-tr:hover a.intable {
+tr:hover a.intable { 
     color: #3498db;
 }
 
@@ -111,7 +111,7 @@ a:after {
 }
 
 .navbar-default {
-	background-color: rgba(113, 113, 113, 0.5);
+	background-color: #3498db;
 	border-color: transparent;
 }
 
@@ -139,18 +139,19 @@ a:after {
 
 i {
 	margin: 8px;
-	color: #3498db;
+	color: #3498db; 
 }
 
 /* HeaderWrap */
 #headerwrap {
+	background-color: #3498db;
 	margin-top: -20px;
-	padding-top: 150px;
+	padding-top: 200px;
 	background-attachment: relative;
 	background-position: center center;
-	min-height: 600px;
+	min-height: 680px;
 	width: 100%;
-
+	
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -169,12 +170,6 @@ i {
 	font-size: 45px;
 	font-weight: 300;
 	letter-spacing: 1px;
-}
-
-#bottompanel {
-  color: black
-
-
 }
 
 .table-bordered {
@@ -285,12 +280,60 @@ i {
     transition:height .01s ease
 }
 
-.
+.acidjs-rating-stars,
+.acidjs-rating-stars label::before
+{
+    display: inline-block;
+}
+ 
+.acidjs-rating-stars label:hover,
+.acidjs-rating-stars label:hover ~ label
+{
+    color: #f5b301;
+}
+ 
+.acidjs-rating-stars *
+{
+    margin: 0;
+    padding: 0;
+}
+ 
+.acidjs-rating-stars input
+{
+    display: none;
+}
+ 
+.acidjs-rating-stars
+{
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+ 
+.acidjs-rating-stars label
+{
+    color: #ccc;
+}
+ 
+.acidjs-rating-stars label::before
+{
+    content: "\2605";
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+ 
+.acidjs-rating-stars input:checked ~ label
+{
+    color: #f5b301;
+}
 
 .popover {
     max-height: 300px;
-    min-height: 150px;
-    max-width: 325px;
-    min-width: 325px;
+    min-height: 150px; 
+    max-width: 325px; 
+    min-width: 325px; 
     !important; overflow: scroll;
 }
+
