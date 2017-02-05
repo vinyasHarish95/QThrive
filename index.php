@@ -141,7 +141,7 @@
 
 			<div class="col-lg-4">
 
-				<a href="localhost:8888/chat.php"><img src="img/index01.png" height="180" alt=""></a>
+				<a href="chat.php"><img src="img/index01.png" height="180" alt=""></a>
 
 				<h4>Chat.</h4>
 
@@ -152,7 +152,7 @@
 
 			<div class="col-lg-4">
 
-				<a href="localhost:8888/journal.php"><img src="img/index02.png" height="180" alt=""></a>
+				<a href="journal.php"><img src="img/index02.png" height="180" alt=""></a>
 
 				<h4>Journal.</h4>
 
@@ -163,7 +163,7 @@
 
 			<div class="col-lg-4">
 
-				<a href="localhost:8888/jentries.php"><img src="img/index03.png" height="180" alt=""></a>
+				<a href="jentries.php"><img src="img/index03.png" height="180" alt=""></a>
 
 				<h4>Thrive.</h4>
 
