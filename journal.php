@@ -33,6 +33,7 @@
 
   #headerwrap {
       background-color: transparent;
+      padding-top: 100px;
   }
 
   .navbar-default {
@@ -56,6 +57,7 @@
   #bottomBlurb {
     padding-top: 20px;
     padding-bottom: 20px;
+    color: white;
   }
 
 
@@ -71,9 +73,12 @@
     width: 100%;
     height: 250px;
     padding: 12px 20px;
-
     border: 2px solid #ffffff;
     border-radius: 2px;
+  }
+
+  #bottomCredits {
+      color: white;
   }
   </style>
 
