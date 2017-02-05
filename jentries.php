@@ -24,7 +24,6 @@
 
   <style>
     #headerwrap {
-        padding-top: 100px;
         min-height: 850px;
         background-image: url("img/sail.jpg");
         background-size: cover;
@@ -49,7 +48,7 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-            <li><a>Welcome, Vinyas.</a></li>
+            <li><a><h4 style="color:white">Welcome, Vinyas.</h4></a></li>
         </ul>
       </div>
   </div>
@@ -86,7 +85,7 @@
 <!-- footer section -->
 <div class="container">
 
-  <p class="centered" style="margin-top: 40px;">Created by Ben, Sean, Vinyas, &amp; Vinith</p>
+  <p class="centered" style="margin-top: 40px;">Created by Ben, Sean, Vinyas, &amp; Vinith for QHacks 2017.</p>
 
 </div>
 
