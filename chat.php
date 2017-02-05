@@ -167,7 +167,7 @@
 
 	<div class="container">
 
-		<p class="centered">Created by Ben, Sean, Vinyas &amp; Vinith</p>
+		<p class="centered">Created by Ben, Sean, Vinyas &amp; Vinith for QHacks 2017.</p>
 
 	</div>
 	<!-- /container -->

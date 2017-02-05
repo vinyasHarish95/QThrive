@@ -21,6 +21,15 @@
 
     <!-- Fonts from Google Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+  <style>
+  #headerwrap{
+    background-image: url("img/time2.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    }
+  </style>
 
   </head>
 
@@ -65,7 +74,7 @@
 
          		<ul class="nav navbar-nav navbar-right">
 
-            		<li><a href="login.php">Already a member?</a></li>
+            		<li><a href="login.php"><h4 style="color:white">Already a member?</h4></a></li>
 
          		</ul>
 
@@ -82,13 +91,13 @@
 
 			<div class="row">
 
-				<div class="col-lg-6">
+				<div class="col-lg-6 col-lg-offset-6">
 
 					<h1>Work towards better mental health... one journal entry at a time.</h1>
 
 					<form action="signup.php" method="GET" class="form-inline" role="form">
 
-						<div class="form-group">
+						<div class="form-group" style="margin-left:15%">
 
 					 		<input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="youremail@address.ca">
 
@@ -102,8 +111,6 @@
 				<!-- /col-lg-6 -->
 
 				<div class="col-lg-6">
-
-					<img class="img-responsive" style=" height: auto; width: auto; max-height: 400px; max-width: 400px;" src="img/diary.png" alt="Diary!">
 
 				</div>
 				<!-- /col-lg-6 -->
@@ -216,7 +223,7 @@
 
 	<div class="container">
 
-		<p class="centered">Created by Ben, Sean, Vinyas &amp; Vinith</p>
+		<p class="centered">Created by Ben, Sean, Vinyas &amp; Vinith for QHacks 2017.</p>
 
 	</div>
 	<!-- /container -->
