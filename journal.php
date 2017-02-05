@@ -10,7 +10,7 @@
 
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <title>QThrive - Journal </title>
+  <title>QThrive - Journal</title>
 
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.css" rel="stylesheet">
@@ -21,6 +21,50 @@
   <!-- Fonts from Google Fonts -->
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+  <style>
+  body {
+    background-image: url("img/lake.jpg");
+  }
+
+  #bottompanel {
+    background-color: rgba(113, 113, 113, 0.8);
+    top: 1000px;
+  }
+
+  #submitButton {
+    color: white;
+    background-color: rgba(100,100,100, 0.5);
+    left: 50%;
+    margin-top: 10px;
+    margin-left: 40%;
+    font-size: 125%;
+    border: 2px solid #ffffff;
+  }
+
+  #bottomBlurb {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+
+
+
+  /* bring your own prefixes */
+
+
+
+  #journal {
+    color: white;
+    background-color: rgba(100,100,100, 0.5);
+    width: 100%;
+    height: 200px;
+    padding: 12px 20px;
+
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+  }
+  </style>
 
 </head>
 <body>
@@ -44,38 +88,32 @@
   </div>
 
   <div id="headerwrap">
-  <div class="container">
-    <form id="journalForm">
-        <div class="form-group">
-            <h2 for="journal">Journal Entry:</h2>
-            <input type="text" name="journalEntry" class="form-control" id="journal">
-        </div>
-        <button type="submit" class="btn btn-default" name="submit">Submit</button>
-    </form>
-  </div>
+   <div class="container">
+     <div class="form-group">
+       <h2 for="journal">Journal Entry:</h2>
+        <textarea id="journal" name="journalEntry"></textarea>
+        <button id="submitButton" type="submit" class="btn btn-default" name="submit">Submit</button>
+     </form>
+   </div>
+ </div>
+
+
+
+<div id="bottompanel">
+  <h3 class="centered" id="bottomBlurb">
+    QThrive is design to help students
+    <br>navigate through life's challenges and joys
+  </h3>
 </div>
 
-<div class="container">
 
-  <hr>
-
-  <div class="row centered">
-
-  </div>
-  <!-- /row -->
-  <h1 class="centered">QThrive is for students.</h1>
-  <h3 class="centered">Take the challenges and joys one day at a time.</h3>
-
-  <hr>
-
-</div>
-<!-- /container -->
-
-<div class="container">
+<div class="container" id="bottomCredits">
 
   <p class="centered">Created by Ben, Sean, Vinyas, &amp; Vinith</p>
 
 </div>
+
+
 <script>
     // single example
     $("#journalForm").submit(function(event){
