@@ -50,7 +50,7 @@
             <h2 for="journal">Journal Entry:</h2>
             <input type="text" name="journalEntry" class="form-control" id="journal">
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-default" name="submit">Submit</button>
     </form>
   </div>
 </div>

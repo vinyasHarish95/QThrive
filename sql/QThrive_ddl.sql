@@ -28,3 +28,8 @@ CREATE TABLE Entry(
 	PRIMARY KEY (Entry_ID),
 	FOREIGN KEY (Writer_ID) REFERENCES Member(Member_ID) ON UPDATE CASCADE ON DELETE CASCADE
 );
+
+-- Queries
+-- Insert a journal entry into the database
+-- INSERT INTO Entry(Writer_ID, Creation_Date, Entry_Body)
+-- VALUES(1,CURRENT_DATE, "What a great day today was!!!")

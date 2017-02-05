@@ -22,87 +22,6 @@
     <!-- Fonts from Google Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
 
-    <script>
-    var accessToken = "d458d5cf2a7841bfba46146f8206d539";
-		var baseUrl = "https://api.api.ai/v1/";
-		$(document).ready(function() {
-			$("#input").keypress(function(event) {
-				if (event.which == 13) {
-					event.preventDefault();
-					send();
-				}
-			});
-			$("#rec").click(function(event) {
-				switchRecognition();
-			});
-		});
-		var recognition;
-		function startRecognition() {
-			recognition = new webkitSpeechRecognition();
-			recognition.onstart = function(event) {
-				updateRec();
-			};
-			recognition.onresult = function(event) {
-				var text = "";
-			    for (var i = event.resultIndex; i < event.results.length; ++i) {
-			    	text += event.results[i][0].transcript;
-			    }
-			    setInput(text);
-				stopRecognition();
-			};
-			recognition.onend = function() {
-				stopRecognition();
-			};
-			recognition.lang = "en-US";
-			recognition.start();
-		}
-
-		function stopRecognition() {
-			if (recognition) {
-				recognition.stop();
-				recognition = null;
-			}
-			updateRec();
-		}
-		function switchRecognition() {
-			if (recognition) {
-				stopRecognition();
-			} else {
-				startRecognition();
-			}
-		}
-		function setInput(text) {
-			$("#input").val(text);
-			send();
-		}
-		function updateRec() {
-			$("#rec").text(recognition ? "Stop" : "Speak");
-		}
-		function send() {
-			var text = $("#input").val();
-			$.ajax({
-				type: "POST",
-				url: baseUrl + "query?v=20150910",
-				contentType: "application/json; charset=utf-8",
-				dataType: "json",
-				headers: {
-					"Authorization": "Bearer " + accessToken
-				},
-				data: JSON.stringify({ query: text, lang: "en", sessionId: "somerandomthing" }),
-				success: function(data) {
-					setResponse(JSON.stringify(data, undefined, 2));
-				},
-				error: function() {
-					setResponse("Internal Server Error");
-				}
-			});
-			setResponse("Loading...");
-		}
-		function setResponse(val) {
-			$("#response").text(val);
-		}
-	</script>
-
   </head>
 
   <body>
@@ -146,7 +65,7 @@
 
          		<ul class="nav navbar-nav navbar-right">
 
-            		<li><a><h4>Welcome, Vinyas.</h4></a></li>
+            		<li><a><h4 style="color:white;">Welcome, Vinyas.</h4></a></li>
 
          		</ul>
 
@@ -201,9 +120,11 @@
 
 				<h1>So what do I do?</h1>
 				<h4>Speak to Sona like you would a normal person. Based on what you tell her, she may prompt you to do some journalling or connect you to local resources.</h4>
-				<p></p>
+				<br></br>
+				<br></br>
 				<h4>Fun fact... 'Sona' is Scottish Gaelic for 'happy'.</h4>
-                <h6>DISCLAIMER: Note that Sona cannot provide medical diagnoses or replace attending counselling or therapy with a health professional. </h6>
+				<p></p>
+
 			</div>
 
 		</div>
@@ -237,6 +158,7 @@
 		<!-- /row -->
 		<h1 class="centered">QThrive is for students.</h1>
 		<h3 class="centered">Take the challenges and joys one day at a time.</h3>
+		<h5 class="centered">DISCLAIMER: Note that Sona cannot provide medical diagnoses or replace attending counselling or therapy with a health professional. </h5>
 
 		<hr>
 
