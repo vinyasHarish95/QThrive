@@ -22,6 +22,16 @@
     <!-- Fonts from Google Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
 
+	<style>
+  #headerwrap{
+    background-image: url("img/winter.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    }
+  </style>
+
   </head>
 
   <body>
@@ -82,23 +92,14 @@
 
 			<div class="row">
 
-				<div class="col-lg-6">
-                    <img class="img-responsive center-block" style=" height: 220px; width: 220px; max-height: 600px; max-width: 600px ;" src="img/sona.png" alt="Sona">
-                    <p></p>
-					<h1>Meet Sona...</h1>
-					<h2>Sona is a friendly chatbot that will help facilitate reflection.</h2>
-
-
-				</div>
-				<!-- /col-lg-6 -->
-
-				<div class="col-lg-6">
-
-                    <iframe
-                        width="600"
-                        height="430"
-                        src="https://console.api.ai/api-client/demo/embedded/569cbb55-a64c-4671-8c95-6494d83be7a8">
-                    </iframe>
+				<div class="col-lg-12">
+					<iframe
+						width="700px"
+						height="400px"
+						style = "margin-left:20%"
+						src="https://console.api.ai/api-client/demo/embedded/569cbb55-a64c-4671-8c95-6494d83be7a8">
+					</iframe>
+					<p></p>
 
 				</div>
 				<!-- /col-lg-6 -->
