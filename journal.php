@@ -31,6 +31,14 @@
     -o-background-size: cover;
   }
 
+  #headerwrap {
+      background-color: transparent;
+  }
+
+  .navbar-default {
+      background-color: transparent;
+  }
+
   #bottompanel {
     background-color: rgba(113, 113, 113, 0.8);
     top: 1000px;
@@ -61,7 +69,7 @@
     color: white;
     background-color: rgba(100,100,100, 0.5);
     width: 100%;
-    height: 200px;
+    height: 250px;
     padding: 12px 20px;
 
     border: 2px solid #ffffff;
