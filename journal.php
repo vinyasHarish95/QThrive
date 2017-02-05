@@ -25,6 +25,10 @@
   <style>
   body {
     background-image: url("img/lake.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
   }
 
   #bottompanel {
@@ -34,10 +38,9 @@
 
   #submitButton {
     color: white;
-    background-color: rgba(100,100,100, 0.5);
-    left: 50%;
+    background: rgba(100,100,100, 0.5);
+    margin-left: 45%;
     margin-top: 10px;
-    margin-left: 40%;
     font-size: 125%;
     border: 2px solid #ffffff;
   }
@@ -101,7 +104,7 @@
 
 <div id="bottompanel">
   <h3 class="centered" id="bottomBlurb">
-    QThrive is design to help students
+    QThrive is designed to help students
     <br>navigate through life's challenges and joys
   </h3>
 </div>
