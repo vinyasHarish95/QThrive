@@ -57,14 +57,6 @@ if (isset($_POST['submit'])) {
 			background-color: rgba(113, 113, 113, 0.8);
 			top: 1000px;
 		}
-		#submitButton {
-			color: white;
-			background: rgba(100,100,100, 0.5);
-			margin-left: 45%;
-			margin-top: 10px;
-			font-size: 125%;
-			border: 2px solid #ffffff;
-		}
 		#bottomBlurb {
 			padding-top: 20px;
 			padding-bottom: 20px;
@@ -113,8 +105,10 @@ if (isset($_POST['submit'])) {
             <h1 for="journal" style="text-align:center">Journal Entry</h1>
             <textarea name="journalEntry" id="journal"></textarea>
         </div>
-				<button id="sentiment" type="analyze" class="btn btn-default" name="analyze">Analyze</button>
-        <button type="submit" class="btn btn-default" name='submit'>Submit</button>
+				<div class="btn-group" style="margin-left:20%"> <button id="sentiment" type="analyze" class="btn" name="analyze" style="background: #3498db; border: 2px solid white;
+				color: white; width: 300px; height: 100 px;  font-size:20px; margin-right:100px">Analyze</button>
+        <button type="submit" class="btn" name="submit" style="background: #3498db; border: 2px solid white;
+				color: white; width: 300px; height: 44px;  font-size:20px">Submit</button></div>
     </form>
   </div>
 </div>
