@@ -156,56 +156,61 @@ if (isset($_POST['submit'])) {
 				 <div class="modal fade" id="myModal" role="dialog">
 				   <div class="modal-dialog">
 
-				     <!-- Modal content-->
-				     <div class="modal-content">
-				       <div class="modal-header">
-				         <button type="button" class="close" data-dismiss="modal">&times;</button>
-				         <h4 class="modal-title">Sentiments Analysis (Joy, Fear, Anger, Surpise, Sadness)</h4>
-				       </div>
-				       <div class="modal-body" style="margin-left:30px">
-								 <div class="row" style="margin-left:30px">
-								 <div class="clearfix">
-		                 <div class="c100 p80" style="margin-right:20px">
-		                     <span>80%</span>
+				    <!-- Modal content-->
+				    <div class="modal-content">
+				        <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal">&times;</button>
+				        <h4 class="modal-title">Sentiments Analysis (Joy, Fear, Anger, Surprise, Sadness)</h4>
+				    </div>
+				    <div class="modal-body" style="margin-left:30px">
+                        <div class="row" style="margin-left:30px">
+                        <div class="clearfix">
+
+		                <div id="cJoy" class="c100" style="margin-right:20px">
+		                    <span id="lblJoy"></span>
+		                    <div class="slice">
+		                        <div class="bar"></div>
+		                        <div class="fill"></div>
+		                    </div>
+		                </div>
+
+						<div id="cFear" class="c100 p16 green" style="margin-right:20px">
+		                    <span id="lblFear">16%</span>
+		                    <div class="slice">
+		                        <div class="bar"></div>
+		                        <div class="fill"></div>
+		                    </div>
+		                </div>
+
+						<div id="cAnger" class="c100 p1 orange" style="margin-right:20px">
+		                    <span id="lblAnger">0.49%</span>
 		                     <div class="slice">
 		                         <div class="bar"></div>
 		                         <div class="fill"></div>
 		                     </div>
 		                 </div>
 
-										 <div class="c100 p16 green" style="margin-right:20px">
-		                     <span>16%</span>
-		                     <div class="slice">
-		                         <div class="bar"></div>
-		                         <div class="fill"></div>
-		                     </div>
-		                 </div>
+						</div>
+						</div>
+						<div class="row" style="margin-left:60px">
 
-										 <div class="c100 p1 orange" style="margin-right:20px">
-		                     <span>0.49%</span>
-		                     <div class="slice">
-		                         <div class="bar"></div>
-		                         <div class="fill"></div>
-		                     </div>
-		                 </div>
-									 </div>
-								 </div>
-									 <div class="row" style="margin-left:60px">
-										 <div class="c100 p2" style="margin-left:40px; margin-right:20px">
-		                     <span>1.65%</span>
-		                     <div class="slice">
-		                         <div class="bar"></div>
-		                         <div class="fill"></div>
-		                     </div>
-												 </div>
-												 <div class="c100 p1 green" style="margin-right:20px">
-				                     <span>1.15%</span>
-				                     <div class="slice">
-				                         <div class="bar"></div>
-				                         <div class="fill"></div>
-				                     </div>
-				                 </div>
-											</div>
+						<div id="cSurprise" class="c100 p2" style="margin-left:40px; margin-right:20px">
+		                    <span id="lblSurprise">1.65%</span>
+		                    <div class="slice">
+		                        <div class="bar"></div>
+		                        <div class="fill"></div>
+		                    </div>
+						</div>
+
+						<div id="cSadness" class="c100 p1 green" style="margin-right:20px">
+                            <span id="lblSadness">1.15%</span>
+                            <div class="slice">
+				                <div class="bar"></div>
+				                <div class="fill"></div>
+				            </div>
+				        </div>
+
+                        </div>
 
 
 
@@ -225,6 +230,13 @@ if (isset($_POST['submit'])) {
 </div>
 
 <script>
+
+        function getCookie(name) {
+            var value = "; " + document.cookie;
+            var parts = value.split("; " + name + "=");
+            if (parts.length == 2) return parts.pop().split(";").shift();
+        }
+
 		//Indico API call
 		$('#sentiment').click(function(event){
 				event.preventDefault();
@@ -246,6 +258,22 @@ if (isset($_POST['submit'])) {
 						document.cookie = 'sadness='+emotionValues.results.sadness+'; expires=' + now.toUTCString() + '; path=/';
 						document.cookie = 'fear='+emotionValues.results.fear+'; expires=' + now.toUTCString() + '; path=/';
 						document.cookie = 'surprise='+emotionValues.results.surprise+'; expires=' + now.toUTCString() + '; path=/';
+
+                        // populate modal
+                        document.getElementById("lblJoy").textContent = Math.round(emotionValues.results.joy*100) + "%";
+                        $('#cJoy').removeClass('c100').addClass('c100 p' + Math.round(emotionValues.results.joy*100));
+
+                        document.getElementById("lblFear").textContent = Math.round(emotionValues.results.fear*100) + "%";
+                        $('#cFear').removeClass('c100').addClass('c100 p' + Math.round(emotionValues.results.fear*100));
+
+                        document.getElementById("lblAnger").textContent = Math.round(emotionValues.results.anger*100) + "%";
+                        $('#cAnger').removeClass('c100').addClass('c100 p' + Math.round(emotionValues.results.anger*100));
+
+                        document.getElementById("lblSurprise").textContent = Math.round(emotionValues.results.surprise*100) + "%";
+                        $('#cSurprise').removeClass('c100').addClass('c100 p' + Math.round(emotionValues.results.surprise*100));
+
+                        document.getElementById("lblSadness").textContent = Math.round(emotionValues.results.sadness*100) + "%";
+                        $('#cSadness').removeClass('c100').addClass('c100 p' + Math.round(emotionValues.results.sadness*100));
 				});
 		})
 </script>
