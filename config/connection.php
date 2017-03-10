@@ -2,8 +2,8 @@
 // used to connect to the database
 $host = "localhost";
 $db_name = "QThrive";
-$username = "QThrive";
-$password = "thrive";
+$username = "qthrive";
+$password = "qthrive17";
 try {
     $con = new mysqli($host,$username,$password,$db_name);
 }

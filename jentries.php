@@ -48,7 +48,7 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-            <li><a><h4 style="color:white">Welcome, Vinyas.</h4></a></li>
+            <li><a><h4 style="color:white">Welcome, Sean.</h4></a></li>
         </ul>
       </div>
   </div>
